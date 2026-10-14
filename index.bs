@@ -395,16 +395,37 @@ for places where markup attributes do not fit.
 </div>
 
 <div class=example>
-The URL Standard [[URL]] redefined URL parsing
-and was intended to supersede RFC 3986 [[RFC3986]] and RFC 3987 [[RFC3987]],
-but it did not displace them.
-The definitions coexist and diverge,
+The URL Standard [[URL]] set out to align URL parsing
+with deployed implementations,
+which RFC 3986 [[RFC3986]] and RFC 3987 [[RFC3987]] did not describe,
+and to obsolete those RFCs in the process.
+The motivation was compatibility,
+but the definitions now coexist and diverge,
 and each implementation must choose which to follow.
-URL Pattern [[URLPATTERN]] introduced a new pattern language
-despite URI Templates [[RFC6570]] in another organization,
-and URL Fragment Text Directives [[SCROLL-TO-TEXT-FRAGMENT]] introduced new selectors
-despite Selectors and States [[selectors-states]] in the same organization;
-in each case, prior work was not built on.
+A comparable fork of HTML later converged on a single specification;
+the costs there were transitional.
+</div>
+
+<div class=example>
+URI Templates [[RFC6570]] already provided a syntax
+for describing URL structure.
+URL Pattern [[URLPATTERN]] introduced another
+rather than reusing it for its new matching semantics,
+and authors working across both
+must learn and map between them.
+</div>
+
+<div class=example>
+Selectors and States [[selectors-states]] defines selectors
+for ranges of text,
+using an exact string with prefix and suffix for disambiguation,
+and a serialization of them in URL fragments.
+URL Fragment Text Directives [[SCROLL-TO-TEXT-FRAGMENT]] expresses
+the same selection model
+in a new microsyntax,
+rather than as a profile of the existing serialization.
+A profile limited to text quotes
+would have been no less simple to author or share.
 </div>
 
 <div class=example>
