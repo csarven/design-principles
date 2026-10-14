@@ -416,16 +416,17 @@ must learn and map between them.
 </div>
 
 <div class=example>
-Selectors and States [[selectors-states]] defines selectors
-for ranges of text,
-using an exact string with prefix and suffix for disambiguation,
-and a serialization of them in URL fragments.
-URL Fragment Text Directives [[SCROLL-TO-TEXT-FRAGMENT]] expresses
-the same selection model
-in a new microsyntax,
+XPointer [[xptr-xpointer]] specified text selection in URL fragments first,
+but it applied only to XML and was never completed,
+so an alternative was justified.
+Selectors and States [[selectors-states]] later defined different kinds of selectors
+among them text quotes,
+which match an exact string with prefix and suffix for disambiguation,
+and serialized them in URL fragments
+using a functional syntax shared with the XPointer Framework [[xptr-framework]].
+URL Fragment Text Directives [[SCROLL-TO-TEXT-FRAGMENT]] then expressed
+the text quote model in a new microsyntax,
 rather than as a profile of the existing serialization.
-A profile limited to text quotes
-would have been no less simple to author or share.
 </div>
 
 <div class=example>
